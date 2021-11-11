@@ -1,8 +1,5 @@
 
 let formularioDeRegistro = document.getElementById('formularioDeRegistro');
-formularioDeRegistro.addEventListener("submit",guardarDatos)
-
-
 
 
 function cargarRegistros(){
@@ -17,11 +14,7 @@ function guardarRegistros(listadoRegistros) {
     localStorage.setItem("listadoRegistros", JSON.stringify(listadoRegistros));
 }
 
-function guardarDatos(e) {
-    e.preventDefault();
-    let nombre = document.querySelector("#nombre").value;
-    let email = document.querySelector("#email").value;
-    let contraseña = document.querySelector("#contraseña").value;
+function guardarDatos(nombre,email,contraseña) {
     
     let listadoRegistros = cargarRegistros();
 
@@ -39,6 +32,7 @@ function corroborarDatos(nombre,mail,contraseña){
     for (let i = 0; i < listadoRegistros.length; i++){
         if (nombre == verRegistros [i][0] && mail == verRegistros [i][1] && contraseña == verRegistros [i][2]){
             accceso = true;
+
         }
     }
 

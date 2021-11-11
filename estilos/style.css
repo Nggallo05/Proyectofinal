@@ -6,13 +6,22 @@
 
 body{
     font-family: 'Rubik';
-    background-image: url(fondo.jpg);
+    background-image: url(/estilos/fondo.jpg);
     text-align: center;
     width: 100%;
     height: 55rem;
     display:flex;
     justify-content: center;
     align-items: center;
+}
+
+footer{
+    font-family: 'Rubik';
+    text-align: right;
+    display: flex;
+    position: relative;
+    right: 17rem;
+    top: 30rem;
 }
 
 h1{

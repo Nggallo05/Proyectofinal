@@ -13,32 +13,30 @@ const ingreso = document.getElementById ('btnIngreso');
 
 
 
-
 formulario.addEventListener("submit",e => {
     e.preventDefault()
+
     let alertas = ""
     let validarEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
     let ingresar = false
     parrafo.innerHTML = ""
-    if(nombre.value.length <5){
-        alertas += `Nombre demasiado corto <br>` 
-        ingresar = true
+
+    if(nombre.value.length < 5 || (!validarEmail.test(email.value)) || contraseña.value.length <6){
+        alertas += `validacion Pendiente <br>` 
+        ingresar = false
+    }else{
+        ingresar= true
+        alertas += `Acceso Concedido <br>` 
     }
-    if(!validarEmail.test(email.value)){
-        alertas += `Email no valido <br>`
-        ingresar = true
-    }
-    if(contraseña.value.length <6){
-        alertas += `Contraseña demasiada corta <br>` 
-        ingresar = true
-    }
-    if(ingresar){
+    if(!ingresar){
         parrafo.innerHTML = alertas
     }
     else{
+        guardarDatos(nombre.value, email.value, contraseña.value)
         parrafo.innerHTML = 'Ingresando...'
     }
 })
+
 
 
 
