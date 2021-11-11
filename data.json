@@ -1,0 +1,26 @@
+[
+    {"nombre": "Nahuel", 
+    "email": "nahuel.email@email.com", 
+    "contraseña": 123456789},
+    
+    {"nombre": "Juan", 
+    "email": "juan.email@email.com", 
+    "contraseña": 123456789},
+    
+    {"nombre": "Agostina", 
+    "email": "agos.email@email.com", 
+    "contraseña": 123456789},
+    
+    {"nombre": "Francica", 
+    "email": "fran.email@email.com", 
+    "contraseña": 123456789},
+    
+    {"nombre": "Julieta", 
+    "email": "juli.email@email.com", 
+    "contraseña": 123456789},
+    
+    {"nombre": "Pedro", 
+    "email": "pedro.email@email.com", 
+    "contraseña": 123456789}
+    
+    ]

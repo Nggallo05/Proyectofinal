@@ -9,11 +9,12 @@ const formulario = document.getElementById('formularioDeRegistro')
 
 const parrafo = document.getElementById('alertas');
 
+const ingreso = document.getElementById ('btnIngreso');
 
 
 
 
-formulario.addEventListener("submit", e => {
+formulario.addEventListener("submit",e => {
     e.preventDefault()
     let alertas = ""
     let validarEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
@@ -33,13 +34,11 @@ formulario.addEventListener("submit", e => {
     }
     if(ingresar){
         parrafo.innerHTML = alertas
-    }else{
+    }
+    else{
         parrafo.innerHTML = 'Ingresando...'
     }
 })
-
-
-
 
 
 

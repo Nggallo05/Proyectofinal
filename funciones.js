@@ -5,7 +5,6 @@ formularioDeRegistro.addEventListener("submit",guardarDatos)
 
 
 
-
 function cargarRegistros(){
     let listadoRegistros = JSON.parse(localStorage.getItem("listadoRegistros"));
     if(listadoRegistros == null) {
@@ -32,4 +31,21 @@ function guardarDatos(e) {
 
     document.getElementById('formularioDeRegistro').reset();
 }
+
+function corroborarDatos(nombre,mail,contraseña){
+    let verRegistros = cargarRegistros();
+    let accceso = false;
+
+    for (let i = 0; i < listadoRegistros.length; i++){
+        if (nombre == verRegistros [i][0] && mail == verRegistros [i][1] && contraseña == verRegistros [i][2]){
+            accceso = true;
+        }
+    }
+
+    return accceso;
+}
+
+
+
+
 
